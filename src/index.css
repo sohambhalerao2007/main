@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --brand-fuchsia: #e879f9;
+    --brand-purple: #a855f7;
+    --brand-violet: #7c3aed;
+    --brand-deep: #3b0764;
+  }
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans', 'Liberation Sans', sans-serif;
+}
+
+.font-roxborough {
+  font-family: 'Cormorant Garamond', 'Noto Sans', 'Liberation Sans', serif;
+  letter-spacing: -0.02em;
+}
+
+.font-heading {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans', 'Liberation Sans', sans-serif;
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', 'Noto Sans', 'Liberation Sans', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.currency-sym {
+  font-family: 'Noto Sans', 'Liberation Sans', sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 0.1em;
+}
+
+/* Signature 4OURSIGHT Wordmark Gradient: Bright pink glow top-left, violet center, deep purple bottom-right */
+.foursight-wordmark {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background: radial-gradient(circle at 12% 18%, #f5d0fe 0%, #e879f9 22%, #a855f7 52%, #6b21a8 84%, #3b0764 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  display: inline-block;
+  filter: drop-shadow(0 2px 12px rgba(168, 85, 247, 0.3));
+}
+
+/* Signature 4OURSIGHT Button Gradient */
+.btn-foursight {
+  background: radial-gradient(circle at 15% 20%, #f0abfc 0%, #d946ef 24%, #9333ea 62%, #581c87 100%);
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.3);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-foursight:hover {
+  filter: brightness(1.12);
+  box-shadow: 0 6px 24px rgba(217, 70, 239, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-foursight:active {
+  transform: translateY(0);
+}
+
+/* Glassmorphism surface */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.glass-panel-elevated {
+  background: rgba(19, 28, 49, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(168, 85, 247, 0.22);
+}
+
+/* Dark mode ambient gradients */
+html.dark body {
+  background-color: #050508;
+  background-image: 
+    radial-gradient(circle at 12% 10%, rgba(236, 72, 153, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 50% 45%, rgba(139, 92, 246, 0.12) 0%, transparent 55%),
+    radial-gradient(circle at 88% 85%, rgba(88, 28, 135, 0.22) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+html:not(.dark) body {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  background-image: 
+    radial-gradient(circle at 12% 10%, rgba(236, 72, 153, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 88% 85%, rgba(147, 51, 234, 0.08) 0%, transparent 60%);
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "4OURSIGHT — B2B Surplus Intelligence & Direct Counter Billing",
+  "description": "Transform perishable inventory risk into daily cash recovery with Past Year Records (PYR), direct counter billing, dynamic pricing, and consumer demand networks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
